@@ -1,11 +1,16 @@
 export interface FeaturedProject {
   id: string;
   title: string;
+  repoName: string;
   category: string;
   tagline: string;
   description: string;
   technologies: string[];
-  liveDemoUrl: string;
+  language: string;
+  stars: number;
+  forks: number;
+  updatedAt: string;
+  liveDemoUrl: string | null;
   repoUrl: string;
   imagePath: string;
   accentColor: 'lavender' | 'powder' | 'blush' | 'peach';
@@ -115,13 +120,114 @@ export const ABOUT_INFO_CARDS = [
 
 export const FEATURED_PROJECTS: FeaturedProject[] = [
   {
+    id: 'marathwada-water-stress-index',
+    title: 'Marathwada Water Stress Index',
+    repoName: 'marathwada-water-stress-index',
+    category: 'Hydroclimatic ML & Water Security',
+    tagline: 'District-Wise 3-Month Water Stress Monitoring & Forecasting Platform',
+    description:
+      'A research-driven hydroclimatic water stress monitoring and forecasting platform for Marathwada, Maharashtra, integrating rainfall, soil moisture, vegetation, land surface temperature, groundwater, and surface-water indicators to generate district-wise 3-month WSI forecasts, evaluate ML models, and simulate potential scenarios.',
+    technologies: ['Python', 'Machine Learning', 'Hydroclimatic Analytics', 'Data Science', 'Netlify'],
+    language: 'Python',
+    stars: 0,
+    forks: 0,
+    updatedAt: '2026-10-14T14:59:29Z',
+    liveDemoUrl: 'https://marathwada-water-stress-index.netlify.app',
+    repoUrl: 'https://github.com/sanzzzz-g/marathwada-water-stress-index',
+    imagePath: '/src/assets/images/marathwada_wsi_cover_1792053621041.jpg',
+    accentColor: 'powder',
+    features: [
+      'Multi-indicator hydroclimatic modeling (rainfall, soil moisture, NDVI, LST, groundwater)',
+      'District-wise 3-month forward Water Stress Index (WSI) forecasting engine',
+      'Interactive scenario simulations for precipitation deficits and reservoir depletion',
+      'Evaluated predictive ML models across historical Marathwada hydroclimatic datasets',
+    ],
+  },
+  {
+    id: 'bloodbridge-ai',
+    title: 'BloodBridge AI',
+    repoName: 'BloodBridge-Ai',
+    category: 'Healthcare Logistics & Predictive AI',
+    tagline: 'Intelligent Blood Bank Management & Demand Forecasting Platform',
+    description:
+      'An AI-powered blood bank management platform featuring intelligent inventory tracking, expiry alerts, emergency blood request coordination, role-based access control, and ML-based blood demand forecasting.',
+    technologies: ['TypeScript', 'React', 'Node.js', 'Machine Learning', 'Tailwind CSS', 'Vercel'],
+    language: 'TypeScript',
+    stars: 0,
+    forks: 0,
+    updatedAt: '2026-10-14T10:15:35Z',
+    liveDemoUrl: 'https://blood-bridge-ai-nine.vercel.app',
+    repoUrl: 'https://github.com/sanzzzz-g/BloodBridge-Ai',
+    imagePath: '/src/assets/images/bloodbridge_cover_1792053601628.jpg',
+    accentColor: 'blush',
+    features: [
+      'Real-time blood stock inventory matrix with critical threshold and expiry alerts',
+      'ML-driven demand forecasting based on regional trauma patterns and seasonal needs',
+      'Emergency hospital donor coordination pipeline with role-based access control',
+      'Live telemetry dashboard for rapid-response fulfillment and dispatch tracking',
+    ],
+  },
+  {
+    id: 'weather-aware-farm-decisions',
+    title: 'Weather-Aware Farm Decisions',
+    repoName: 'weather-aware-farm-decisions',
+    category: 'Agricultural Decision Support',
+    tagline: 'Resource-Aware Decision Framework for Smallholder Rice Farmers',
+    description:
+      'A resource-aware decision-support framework for smallholder rice farmers that evaluates weather warnings, resource availability, time constraints, and economic feasibility to recommend actionable agricultural decisions.',
+    technologies: ['HTML5', 'JavaScript', 'Weather Analytics', 'Agricultural Economics', 'CSS3'],
+    language: 'HTML',
+    stars: 0,
+    forks: 0,
+    updatedAt: '2026-10-14T16:24:41Z',
+    liveDemoUrl: null,
+    repoUrl: 'https://github.com/sanzzzz-g/weather-aware-farm-decisions',
+    imagePath: '/src/assets/images/weather_farm_cover_1792053640730.jpg',
+    accentColor: 'peach',
+    features: [
+      'Evaluates localized weather warnings against seasonal rice cultivation stage requirements',
+      'Resource availability, labor, and time constraint optimization modeling',
+      'Economic feasibility analysis for cost-effective agricultural interventions',
+      'Actionable farm advisory schedule with risk scoring and contingency planning',
+    ],
+  },
+  {
+    id: 'chatterbox-chat',
+    title: 'chatterbox-chat',
+    repoName: 'chatterbox-chat',
+    category: 'Real-Time Messaging & UI Architecture',
+    tagline: 'Modern Conversational UI Engine with Dynamic Theme Architecture',
+    description:
+      'A chat-style interface and messaging engine built with TypeScript, featuring multi-theme visual customization, responsive layouts, and clean component architecture.',
+    technologies: ['TypeScript', 'React', 'CSS Variables', 'Responsive UI'],
+    language: 'TypeScript',
+    stars: 0,
+    forks: 0,
+    updatedAt: '2026-10-14T13:11:19Z',
+    liveDemoUrl: null,
+    repoUrl: 'https://github.com/sanzzzz-g/chatterbox-chat',
+    imagePath: '/src/assets/images/project_chatterbox_1791982353810.jpg',
+    accentColor: 'lavender',
+    features: [
+      'Engineered with modern TypeScript component architecture and strong type safety',
+      'Multi-theme visual engine supporting instant aesthetic switching',
+      'Realistic conversational UI with message bubbles, typing indicators, and timestamps',
+      'Accessible keyboard navigation, focus states, and fluid responsive design',
+    ],
+  },
+  {
     id: 'jalsuraksha',
     title: 'JalSuraksha',
+    repoName: 'JalSuraksha',
     category: 'Water Security & Drought Management',
     tagline: 'AI-Powered Environmental Resilience Platform',
     description:
       'An AI-powered water-security platform featuring multi-format dataset ingestion, interactive dashboards, drought prediction, prediction history, and multi-dataset analysis.',
-    technologies: ['React', 'Node.js', 'Supabase', 'Tailwind CSS', 'Chart.js'],
+    technologies: ['TypeScript', 'React', 'Node.js', 'Supabase', 'Tailwind CSS', 'Chart.js'],
+    language: 'TypeScript',
+    stars: 1,
+    forks: 0,
+    updatedAt: '2026-05-08T17:19:08Z',
     liveDemoUrl: 'https://jalsuraksha-1.onrender.com',
     repoUrl: 'https://github.com/sanzzzz-g/JalSuraksha',
     imagePath: '/src/assets/images/project_jalsuraksha_1791982354480.jpg',
@@ -136,12 +242,17 @@ export const FEATURED_PROJECTS: FeaturedProject[] = [
   {
     id: 'bharat-grid-intelligence',
     title: 'Bharat Grid Intelligence',
+    repoName: 'bharat-grid-intelligence',
     category: 'Power-Grid Monitoring & Risk Analysis',
     tagline: 'Full-Stack Power Grid Intelligence Dashboard for Bharat',
     description:
       'A power-grid monitoring dashboard featuring risk scoring across 20 Indian states, interactive mapping, analytics, and simulations for heatwaves, coal outages, and renewable-energy surges.',
-    technologies: ['React', 'Leaflet.js', 'Node.js', 'Express', 'Chart.js'],
-    liveDemoUrl: 'https://bharat-grid-intelligence.netlify.app',
+    technologies: ['JavaScript', 'React', 'Leaflet.js', 'Node.js', 'Express', 'Chart.js'],
+    language: 'JavaScript',
+    stars: 1,
+    forks: 0,
+    updatedAt: '2026-05-13T09:32:08Z',
+    liveDemoUrl: 'https://bharat-grid-intelligence-2.onrender.com/',
     repoUrl: 'https://github.com/sanzzzz-g/bharat-grid-intelligence',
     imagePath: '/src/assets/images/project_bharat_grid_1791982353836.jpg',
     accentColor: 'lavender',
@@ -150,44 +261,6 @@ export const FEATURED_PROJECTS: FeaturedProject[] = [
       'Stress-test scenario simulations: extreme heatwave loads, coal supply bottlenecks, solar surge',
       'State-by-state stability and transmission outage vulnerability scoring',
       'Real-time telemetry chart visualizations with sub-50ms render performance',
-    ],
-  },
-  {
-    id: 'chatterbox',
-    title: 'ChatterBox',
-    category: 'Chat Interface & UI Engineering',
-    tagline: 'Zero-Reload 7-Theme Conversational UI Engine',
-    description:
-      'A chat-style interface with a custom CSS theme engine supporting seven switchable visual themes without page reload.',
-    technologies: ['React', 'CSS3 Variable Engine', 'JavaScript', 'Responsive UI'],
-    liveDemoUrl: 'https://chatterbox-blush.vercel.app',
-    repoUrl: 'https://github.com/sanzzzz-g/CHATTERBOX',
-    imagePath: '/src/assets/images/project_chatterbox_1791982353810.jpg',
-    accentColor: 'blush',
-    features: [
-      'Custom CSS property theme engine supporting 7 instant themes without page reload',
-      'Realistic conversational layout with typing indicators, emoji triggers, and message bubbles',
-      'Zero external UI library dependency; hand-crafted CSS variables & micro-animations',
-      'Accessible focus states and fluid responsiveness across mobile and desktop',
-    ],
-  },
-  {
-    id: 'tourism',
-    title: 'Tourism Website',
-    category: 'Responsive Web Development',
-    tagline: 'Curated Travel & Itinerary Experience',
-    description:
-      'A responsive multi-page tourism website featuring destination pages, tour packages, and a contact form.',
-    technologies: ['HTML5', 'CSS3', 'Bootstrap', 'Font Awesome', 'JavaScript'],
-    liveDemoUrl: 'https://steady-flan-9e7803.netlify.app/',
-    repoUrl: 'https://github.com/sanzzzz-g/Tourism',
-    imagePath: '/src/assets/images/project_tourism_1791982354157.jpg',
-    accentColor: 'peach',
-    features: [
-      'Multi-page itinerary presentation with destination showcases and package highlights',
-      'Interactive reservation inquiry and customer contact form with client validation',
-      'Responsive mobile-first layout utilizing clean grid structures and typography',
-      'Scenic photography framing with fluid card hover micro-interactions',
     ],
   },
 ];

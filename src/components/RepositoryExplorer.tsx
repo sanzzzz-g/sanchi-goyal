@@ -16,11 +16,11 @@ export function RepositoryExplorer() {
   const [selectedLanguage, setSelectedLanguage] = useState('All');
   const [sortBy, setSortBy] = useState<'updated' | 'stars' | 'name'>('updated');
 
-  const loadRepositories = async () => {
+  const loadRepositories = async (force: boolean = false) => {
     setLoading(true);
     setError(null);
     try {
-      const result = await fetchGitHubRepos();
+      const result = await fetchGitHubRepos(force);
       setRepos(result.repos);
       setIsFromCache(result.isFromCache);
       setIsFallback(result.isFallback);
@@ -128,7 +128,7 @@ export function RepositoryExplorer() {
           </div>
 
           <button
-            onClick={loadRepositories}
+            onClick={() => loadRepositories(true)}
             disabled={loading}
             className="inline-flex items-center gap-1.5 text-[#5A4CB5] hover:underline disabled:opacity-50"
           >
@@ -153,8 +153,8 @@ export function RepositoryExplorer() {
 
           <div className="flex flex-wrap items-center gap-3">
             {/* Language filter pills */}
-            <div className="flex items-center gap-1 p-1 bg-white border border-[#EAE7F0] rounded-2xl overflow-x-auto">
-              {availableLanguages.slice(0, 5).map((lang) => (
+            <div className="flex items-center gap-1 p-1 bg-white border border-[#EAE7F0] rounded-2xl overflow-x-auto max-w-xs sm:max-w-md">
+              {availableLanguages.map((lang) => (
                 <button
                   key={lang}
                   onClick={() => setSelectedLanguage(lang)}
@@ -208,7 +208,7 @@ export function RepositoryExplorer() {
               <p className="text-xs text-[#777487]">{error}</p>
             </div>
             <button
-              onClick={loadRepositories}
+              onClick={() => loadRepositories(true)}
               className="px-4 py-2 text-xs font-semibold text-[#29283A] bg-[#F8DCE8] hover:bg-[#F2C5D7] rounded-full transition-colors"
             >
               Retry Connection

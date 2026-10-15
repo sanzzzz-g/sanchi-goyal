@@ -243,9 +243,11 @@ ${CERTIFICATIONS_DATA.map((c) => `- ${c.title} (${c.issuer})`).join('\n')}
                     </p>
 
                     <div className="flex items-center gap-4 text-[11px] font-mono text-[#777487] pt-1">
-                      <a href={project.liveDemoUrl} target="_blank" rel="noreferrer" className="text-[#5A4CB5] underline">
-                        Live Demo
-                      </a>
+                      {project.liveDemoUrl && (
+                        <a href={project.liveDemoUrl} target="_blank" rel="noreferrer" className="text-[#5A4CB5] underline">
+                          Live Demo
+                        </a>
+                      )}
                       <a href={project.repoUrl} target="_blank" rel="noreferrer" className="text-[#29283A] underline">
                         GitHub Source
                       </a>
