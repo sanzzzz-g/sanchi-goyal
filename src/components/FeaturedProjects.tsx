@@ -1,8 +1,56 @@
+import { useState } from 'react';
 import { FEATURED_PROJECTS, FeaturedProject } from '../data/portfolioData';
 import { ExternalLink, Github, CheckCircle2, ArrowUpRight, Star, GitFork, Calendar, Code2 } from 'lucide-react';
 
 interface FeaturedProjectsProps {
   onSelectProject?: (project: FeaturedProject) => void;
+}
+
+function ProjectThumbnail({
+  project,
+  accentBg,
+}: {
+  project: FeaturedProject;
+  accentBg: string;
+}) {
+  const [hasError, setHasError] = useState(false);
+
+  return (
+    <div className="relative aspect-video w-full overflow-hidden bg-[#FAF9F6]">
+      {!hasError ? (
+        <img
+          src={project.imagePath}
+          alt={project.title}
+          referrerPolicy="no-referrer"
+          className="w-full h-full object-cover group-hover:scale-[1.02] transition-transform duration-500 ease-out"
+          loading="lazy"
+          onError={() => setHasError(true)}
+        />
+      ) : (
+        <div className="w-full h-full flex flex-col items-center justify-center p-6 text-center bg-gradient-to-br from-[#FAF9F6] via-white to-[#F0EDF5]">
+          <div className="w-12 h-12 rounded-2xl bg-[#DCD6FF]/40 border border-[#DCD6FF] flex items-center justify-center text-[#5A4CB5] mb-2 shadow-sm">
+            <Code2 className="w-6 h-6" />
+          </div>
+          <span className="text-sm font-semibold text-[#29283A]">{project.title}</span>
+          <span className="text-xs font-mono text-[#777487] mt-1">{project.category}</span>
+        </div>
+      )}
+      <div className="absolute top-4 left-4 z-20 flex flex-wrap gap-2">
+        <span
+          className={`inline-block px-3 py-1 rounded-full text-[11px] font-mono font-medium border backdrop-blur-md shadow-sm ${accentBg}`}
+        >
+          {project.category}
+        </span>
+      </div>
+
+      <div className="absolute top-4 right-4 z-20">
+        <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-[11px] font-mono font-medium bg-white/90 border border-[#EAE7F0] text-[#29283A] shadow-sm backdrop-blur-md">
+          <Code2 className="w-3 h-3 text-[#7A6EC2]" />
+          <span>{project.language}</span>
+        </span>
+      </div>
+    </div>
+  );
 }
 
 export function FeaturedProjects({ onSelectProject }: FeaturedProjectsProps) {
@@ -68,31 +116,7 @@ export function FeaturedProjects({ onSelectProject }: FeaturedProjectsProps) {
               className="rounded-3xl bg-white border border-[#EAE7F0] hover:border-[#DCD6FF] hover:shadow-soft-hover transition-all duration-300 overflow-hidden flex flex-col justify-between group"
             >
               {/* Visual Thumbnail */}
-              <div className="relative aspect-video w-full overflow-hidden bg-[#FAF9F6]">
-                <img
-                  src={project.imagePath}
-                  alt={project.title}
-                  referrerPolicy="no-referrer"
-                  className="w-full h-full object-cover group-hover:scale-[1.02] transition-transform duration-500 ease-out"
-                  loading="lazy"
-                />
-                <div className="absolute top-4 left-4 z-20 flex flex-wrap gap-2">
-                  <span
-                    className={`inline-block px-3 py-1 rounded-full text-[11px] font-mono font-medium border backdrop-blur-md shadow-sm ${getAccentBg(
-                      project.accentColor
-                    )}`}
-                  >
-                    {project.category}
-                  </span>
-                </div>
-
-                <div className="absolute top-4 right-4 z-20">
-                  <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-[11px] font-mono font-medium bg-white/90 border border-[#EAE7F0] text-[#29283A] shadow-sm backdrop-blur-md">
-                    <Code2 className="w-3 h-3 text-[#7A6EC2]" />
-                    <span>{project.language}</span>
-                  </span>
-                </div>
-              </div>
+              <ProjectThumbnail project={project} accentBg={getAccentBg(project.accentColor)} />
 
               {/* Card Body */}
               <div className="p-7 sm:p-8 space-y-5 flex-1 flex flex-col justify-between">

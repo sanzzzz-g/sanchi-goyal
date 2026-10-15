@@ -134,7 +134,7 @@ export const FEATURED_PROJECTS: FeaturedProject[] = [
     updatedAt: '2026-10-14T14:59:29Z',
     liveDemoUrl: 'https://marathwada-water-stress-index.netlify.app',
     repoUrl: 'https://github.com/sanzzzz-g/marathwada-water-stress-index',
-    imagePath: '/src/assets/images/marathwada_wsi_cover_1792053621041.jpg',
+    imagePath: '/images/marathwada_wsi_cover_1792053621041.jpg',
     accentColor: 'powder',
     features: [
       'Multi-indicator hydroclimatic modeling (rainfall, soil moisture, NDVI, LST, groundwater)',
@@ -158,7 +158,7 @@ export const FEATURED_PROJECTS: FeaturedProject[] = [
     updatedAt: '2026-10-14T10:15:35Z',
     liveDemoUrl: 'https://blood-bridge-ai-nine.vercel.app',
     repoUrl: 'https://github.com/sanzzzz-g/BloodBridge-Ai',
-    imagePath: '/src/assets/images/bloodbridge_cover_1792053601628.jpg',
+    imagePath: '/images/bloodbridge_cover_1792053601628.jpg',
     accentColor: 'blush',
     features: [
       'Real-time blood stock inventory matrix with critical threshold and expiry alerts',
@@ -182,7 +182,7 @@ export const FEATURED_PROJECTS: FeaturedProject[] = [
     updatedAt: '2026-10-14T16:24:41Z',
     liveDemoUrl: null,
     repoUrl: 'https://github.com/sanzzzz-g/weather-aware-farm-decisions',
-    imagePath: '/src/assets/images/weather_farm_cover_1792053640730.jpg',
+    imagePath: '/images/weather_farm_cover_1792053640730.jpg',
     accentColor: 'peach',
     features: [
       'Evaluates localized weather warnings against seasonal rice cultivation stage requirements',
@@ -206,7 +206,7 @@ export const FEATURED_PROJECTS: FeaturedProject[] = [
     updatedAt: '2026-10-14T13:11:19Z',
     liveDemoUrl: null,
     repoUrl: 'https://github.com/sanzzzz-g/chatterbox-chat',
-    imagePath: '/src/assets/images/project_chatterbox_1791982353810.jpg',
+    imagePath: '/images/project_chatterbox_1791982353810.jpg',
     accentColor: 'lavender',
     features: [
       'Engineered with modern TypeScript component architecture and strong type safety',
@@ -230,7 +230,7 @@ export const FEATURED_PROJECTS: FeaturedProject[] = [
     updatedAt: '2026-05-08T17:19:08Z',
     liveDemoUrl: 'https://jalsuraksha-1.onrender.com',
     repoUrl: 'https://github.com/sanzzzz-g/JalSuraksha',
-    imagePath: '/src/assets/images/project_jalsuraksha_1791982354480.jpg',
+    imagePath: '/images/project_jalsuraksha_1791982354480.jpg',
     accentColor: 'powder',
     features: [
       'Multi-format environmental dataset ingestion (CSV, JSON, regional records)',
@@ -254,7 +254,7 @@ export const FEATURED_PROJECTS: FeaturedProject[] = [
     updatedAt: '2026-05-13T09:32:08Z',
     liveDemoUrl: 'https://bharat-grid-intelligence-2.onrender.com/',
     repoUrl: 'https://github.com/sanzzzz-g/bharat-grid-intelligence',
-    imagePath: '/src/assets/images/project_bharat_grid_1791982353836.jpg',
+    imagePath: '/images/project_bharat_grid_1791982353836.jpg',
     accentColor: 'lavender',
     features: [
       'Interactive geospatial risk mapping covering 20 Indian states with live node indicators',
