@@ -28,7 +28,7 @@ export default function App() {
         <Hero onOpenResume={() => setIsResumeOpen(true)} />
 
         {/* 2. About Me */}
-        <AboutSection />
+        <AboutSection onOpenResume={() => setIsResumeOpen(true)} />
 
         {/* 3. Personal Philosophy: Curiosity, Compiled. */}
         <CuriositySection />

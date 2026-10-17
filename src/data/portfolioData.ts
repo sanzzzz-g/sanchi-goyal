@@ -45,10 +45,10 @@ export const PERSONAL_INFO = {
   description:
     'I build thoughtful software, explore interesting problems, and turn ideas into applications that make a difference.',
   aboutDetailed:
-    "I'm Sanchi, a Computer Science and Engineering student at VIT Chennai. I enjoy exploring how technology works, building practical applications, and turning interesting problems into software. My work spans full-stack development, data-driven dashboards, and interactive digital experiences. I believe the best way to learn is to keep experimenting, building, and improving.",
+    "I'm Sanchi Goyal, a Computer Science and Engineering student at VIT Chennai who enjoys turning curiosity into meaningful software. I love exploring new technologies, building practical applications, and solving real-world problems through thoughtful engineering. From full-stack projects to data-driven systems, I learn by doing and continually seek out challenges that push my technical and creative boundaries.",
   institution: 'Vellore Institute of Technology (VIT), Chennai',
   degree: 'B.Tech in Computer Science and Engineering',
-  duration: 'August 2024 – May 2028',
+  duration: '2022 – 2026',
   cgpa: '8.74 / 10.00',
   location: 'India',
   email: 'gsanchi21@gmail.com',
@@ -94,7 +94,7 @@ export const PHILOSOPHY_CARDS: PhilosophyCard[] = [
 export const ABOUT_INFO_CARDS = [
   {
     title: 'Education',
-    detail: 'B.Tech CSE, VIT Chennai (2024–2028)',
+    detail: 'B.Tech CSE, VIT Chennai (2022–2026)',
     desc: 'Maintaining an 8.74 CGPA with coursework in Data Structures, OOP, DBMS, OS, and Networks.',
     accent: '#DCD6FF',
   },
