@@ -163,7 +163,7 @@ export function Hero({ onOpenResume }: HeroProps) {
               <div className="relative w-full aspect-[3/4] sm:aspect-[4/5] rounded-[1.5rem] overflow-hidden bg-gradient-to-b from-[#FAF9F6] via-white to-[#FAF9F6] flex items-center justify-center border border-[#EAE7F0]/60">
                 {/* Embedded Permanent Photograph */}
                 <img
-                  src="/images/sanchi.jpg"
+                  src="/images/about-sanchi.jpg"
                   alt="Sanchi Goyal — Computer Science and Engineering student at VIT Chennai"
                   className="w-full h-full object-contain relative z-10 select-none"
                   loading="eager"
